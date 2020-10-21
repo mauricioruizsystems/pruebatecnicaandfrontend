@@ -1,0 +1,9 @@
+.principal {
+  
+    padding-left: 20%;
+    padding-right: 10%;
+    height: 100%;
+    width: auto;
+    display: flex;
+    align-items: center;
+}

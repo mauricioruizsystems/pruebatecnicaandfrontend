@@ -1,0 +1,69 @@
+<script>
+    utils.init();
+    utils.countCharacter("textarea-example", 300);
+</script>
+
+<div class="principal">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-8 col-md-8 ">
+                <div class="contenedortramites">
+                    <h1 class="headline-xxl-govco">Queremos conocer tu opinión</h1>
+                    <div *ngFor="let row of opinionLista; let i = index;">
+                        <div class="contenedortramites">
+                            <div *ngIf="row.estado==1">
+                                <h6 class="headline-xs-govco itemnaranja">FALTA UN DÍA</h6>
+                            </div>
+                            <div *ngIf="row.estado==2">
+                                <h6 class="headline-xs-govco itemverde">ACTIVO</h6>
+                            </div>
+
+                            <div *ngIf="row.estado==3">
+                                <h6 class="headline-xs-govco itemazul">CONOCE LOS RESULTADOS</h6>
+                            </div>
+
+                            <h6 class="headline-xs-govco">{{row.nombre}}</h6>
+                            <span class="small-text-govco">{{row.entidad}}</span>
+                            <div class="govco-table govco-table-simple">
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-4 h-100">
+                <div class="contenedoropinionprincipal h-100">
+                    <div class="card govco-card">
+                        <div class="card-body">
+                            <h2 class="headline-xl-govco">Cuentános</h2>
+                            <h3 class="headline-l-govco">¿Cómo podemos mejorar GOV.CO?</h3>
+                            <h5 class="headline-s-govco">Estamos construyendo este espacio para tí tu opinión nos ayuda
+                                a crecer</h5>
+
+                            <br>
+
+                            <div class="textarea-govco">
+                                <textarea class="form-control" rows="5" placeholder="Escribe aquí tu opinión"
+                                    id="textarea-example" maxlength="300" [(ngModel)]="opinion" (keydown)="cuenta(this)">
+                                 </textarea>
+
+                            </div>
+                            <div class="centrado">
+                                <button class="btn btn-round btn-high-mix-govco area-servicio-item"
+                                    (click)="sendOpinion()">Enviar mi opinión</button>
+                            </div>
+                            <div class="centrado">
+                               {{mensaje}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>

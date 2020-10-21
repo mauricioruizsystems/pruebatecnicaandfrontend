@@ -1,0 +1,36 @@
+.principal {
+  
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
+    height: 100%;
+    width: auto;
+    display: flex;
+    align-items: center;
+}
+
+.itemnaranja
+{
+    background-color: orange !important;
+    color:white !important;
+}
+
+.itemverde
+{
+    background-color: green !important;
+    color:white !important;
+}
+
+
+.itemazul
+{
+    background-color: blue !important;
+    color:white !important;
+}
+
+.centrado
+{
+    float:none;
+	text-align:center; 
+}

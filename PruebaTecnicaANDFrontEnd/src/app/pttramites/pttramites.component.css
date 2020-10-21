@@ -1,0 +1,20 @@
+.principal {
+    padding-top: 10%;
+    padding-left: 10%;
+    padding-right: 10%;
+    height: 100%;
+}
+
+.contenedortramites {
+    display: inline-block;
+    height: 100%;
+}
+
+.contenedortramiteprincipal {
+    display: inline-block;
+    height: 100%;
+}
+
+.icongreen {
+    color: green !important;
+}

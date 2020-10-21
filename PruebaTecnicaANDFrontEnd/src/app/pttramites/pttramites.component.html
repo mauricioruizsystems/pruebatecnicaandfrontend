@@ -1,0 +1,68 @@
+<div class="principal">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-sm-4 h-100">
+        <div class="contenedortramiteprincipal h-100">
+          <div class="card govco-card">
+            <div class="card-body">
+              <h5 class="headline-s-govco">Los trámites más usados</h5>
+              <br>
+              <h2 class="headline-xl-govco">{{tramiteprincipal.nombre}}</h2>
+              <br>
+              <span class="small-text-govco">{{tramiteprincipal.entidad}}</span>
+              <br>
+              <button type="button" class="btn-symbolic-govco" *ngIf="tramiteprincipal.disponiblelinea">
+                <span class="govco-icon govco-icon-tramite-en-linea icongreen size-1x"></span>
+                <span class="btn-govco-text textright-govco">Disponible en línea</span>
+              </button>
+              <button type="button" class="btn-symbolic-govco" *ngIf="!tramiteprincipal.disponiblelinea">
+                <span class="govco-icon govco-icon-tramite-presencial size-1x"></span>
+                <span class="btn-govco-text textright-govco">Trámite Presencial</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8 col-md-8 ">
+        <div class="contenedortramites">
+          <div *ngFor="let row of tramitesLista; let i = index;">
+            <div class="contenedortramites">
+              <h6 class="headline-xs-govco">{{row.nombre}}</h6>
+              <span class="small-text-govco">{{row.entidad}}</span>
+              <div class="govco-table govco-table-simple">
+                <table class="table table-striped">
+                  <tbody>
+                    <tr>
+                      <td><button type="button" class="btn-symbolic-govco" *ngIf="row.disponiblelinea">
+                          <span class="govco-icon govco-icon-tramite-en-linea icongreen size-1x"></span>
+                          <span class="btn-govco-text textright-govco">Disponible en línea</span>
+                        </button>
+                        <button type="button" class="btn-symbolic-govco" *ngIf="!row.disponiblelinea">
+                          <span class="govco-icon govco-icon-tramite-presencial size-1x"></span>
+                          <span class="btn-govco-text textright-govco">Trámite Presencial</span>
+                        </button></td>
+                      <td>
+                        <button type="button" class="btn-symbolic-govco" *ngIf="row.concosto">
+                          <span class="govco-icon govco-icon-tramite-con-costo size-1x"></span>
+                          <span class="btn-govco-text textright-govco">Trámite con costo</span>
+                        </button>
+                        <button type="button" class="btn-symbolic-govco" *ngIf="!row.concosto">
+                          <span class="govco-icon govco-icon-tramite-sin-costo size-1x"></span>
+                          <span class="btn-govco-text textright-govco">Trámite Gratuito</span>
+                        </button>
+                      </td>
+                      <td><a href="/">Ver todo el trámite</a></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>
